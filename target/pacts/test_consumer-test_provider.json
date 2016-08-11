@@ -1,0 +1,58 @@
+{
+    "provider": {
+        "name": "test_provider"
+    },
+    "consumer": {
+        "name": "test_consumer"
+    },
+    "interactions": [
+        {
+            "description": "ExampleJavaConsumerPactTest second test interaction",
+            "request": {
+                "method": "OPTIONS",
+                "path": "/second",
+                "headers": {
+                    "testreqheader": "testreqheadervalue"
+                },
+                "body": ""
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "testreqheader": "testreqheadervalue"
+                },
+                "body": ""
+            },
+            "providerState": "test state 2"
+        },
+        {
+            "description": "ExampleJavaConsumerPactTest test interaction",
+            "request": {
+                "method": "GET",
+                "path": "/",
+                "headers": {
+                    "testreqheader": "testreqheadervalue"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "testreqheader": "testreqheadervalue"
+                },
+                "body": {
+                    "name": "harry",
+                    "responsetest": true
+                }
+            },
+            "providerState": "test state"
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "2.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.2.11"
+        }
+    }
+}
